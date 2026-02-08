@@ -1,14 +1,22 @@
 /* Variables and global element defaults */
+
+/* Prevent width + padding from causing overflow and right-side gap site-wide */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: min(300px, 100%);
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 12px 24px;
-    gap: 32px;
+    gap: 18px;
 }
 
 button {

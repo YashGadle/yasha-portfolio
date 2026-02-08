@@ -1,6 +1,6 @@
 /* Mobile – must come after base/component styles so it overrides */
 @media (max-width: 768px) {
-    main {
+    .margin-wrapper {
         margin: 0;
     }
 
