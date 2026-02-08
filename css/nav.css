@@ -6,6 +6,7 @@ nav {
     align-items: center;
     padding: 12px 24px;
     height: 50px;
+    background-color: var(--nav-bg-color);
 }
 
 nav .logo-container {
