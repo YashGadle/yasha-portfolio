@@ -34,33 +34,29 @@ class ThemeToggle extends HTMLElement {
   }
 }
 
-class ToolTip extends HTMLElement {
+class SideBar extends HTMLElement {
   connectedCallback() {
-    this.addEventListener("mouseenter", this.showToolTip);
-    this.addEventListener("mouseleave", this.hideToolTip);
+    const btn = this.querySelector("button");
+    const closeBtn = this.querySelector("#close-side-bar");
+    const sideBarContent = this.querySelector(".side-bar-content");
+
+    btn.addEventListener("click", () => {
+      sideBarContent.classList.add("open");
+    });
+
+    closeBtn.addEventListener("click", (e) => {
+      sideBarContent.classList.remove("open");
+    });
+
+    // Event bubbling: any click inside the sidebar that hits an anchor closes it and lets the browser navigate
+    this.addEventListener("click", (e) => {
+      const link = e.target.closest("a");
+      if (link) {
+        sideBarContent.classList.remove("open");
+      }
+    });
   }
-
-  disconnectedCallback() {
-    this.removeEventListener("mouseenter", this.showToolTip);
-    this.removeEventListener("mouseleave", this.hideToolTip);
-  }
-
-  showToolTip = (e) => {
-    const contentNode = this.querySelector("tool-tip-content");
-    if (!contentNode) return;
-
-    contentNode.classList.add("show-tooltip");
-  };
-  hideToolTip = (e) => {
-    const contentNode = this.querySelector("tool-tip-content");
-    if (!contentNode) return;
-
-    contentNode.classList.remove("show-tooltip");
-  };
 }
 
-class ToolTipContent extends HTMLElement {}
-
-customElements.define("tool-tip", ToolTip);
-customElements.define("tool-tip-content", ToolTipContent);
+customElements.define("side-bar", SideBar);
 customElements.define("theme-toggle", ThemeToggle);
