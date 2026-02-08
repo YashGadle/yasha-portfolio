@@ -1,0 +1,122 @@
+/* Navigation bar and sidebar */
+nav {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    height: 50px;
+}
+
+nav .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 20px;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    font-weight: 500;
+}
+
+nav .resume-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border-radius: 4px;
+}
+
+nav .resume-link:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 3px;
+}
+
+nav .actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav .theme-toggle {
+    padding: 8px;
+    cursor: pointer;
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 1.25rem;
+}
+
+nav .theme-toggle:hover {
+    opacity: 0.8;
+}
+
+nav .theme-toggle:focus-visible {
+    outline: 2px solid var(--text-color);
+    outline-offset: 2px;
+}
+
+nav .side-bar-actions {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    padding: 12px;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+nav side-bar {
+    display: none;
+}
+
+nav .hamburger {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    border-radius: 4px;
+}
+
+/* Prevent background scroll when sidebar is open */
+body:has(nav .side-bar-content.open) {
+    overflow: hidden;
+}
+
+nav .side-bar-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    padding: 8px;
+    opacity: 0;
+    z-index: 2;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+nav .side-bar-content.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+nav .side-bar-content .list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 4px 24px;
+    margin-top: 64px;
+}

@@ -3,6 +3,7 @@ class ThemeToggle extends HTMLElement {
     super();
     this.root = document.documentElement;
   }
+  
   connectedCallback() {
     this.initTheme();
     this.addEventListener("click", this.toggleTheme);

@@ -1,0 +1,49 @@
+/* Variables and global element defaults */
+:root {
+    --logo-size: 36px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 12px 24px;
+    gap: 32px;
+}
+
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Hide outline when focus is from mouse click; show it for keyboard (Tab) */
+a:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-weight: 400;
+}
