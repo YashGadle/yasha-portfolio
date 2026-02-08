@@ -38,5 +38,11 @@
     .about-me-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-container img {
+        width: 350px;
+        height: 350px;
     }
 }
