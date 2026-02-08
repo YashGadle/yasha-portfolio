@@ -8,6 +8,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: min(300px, 100%);
+    max-width: 1000px;
     margin: 0 auto;
     padding: 12px 24px;
     gap: 32px;

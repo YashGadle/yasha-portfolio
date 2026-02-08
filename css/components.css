@@ -62,8 +62,6 @@ tool-tip-content {
     justify-content: center;
     align-items: center;
     gap: 32px;
-    min-width: min(300px, 100%);
-    max-width: 1000px;
     height: max-content;
     box-sizing: border-box;
 }
@@ -98,6 +96,7 @@ tool-tip-content {
 
 .skills-container {
     padding-top: 12px;
+    width: 100%;
 }
 
 .skills-container ul {
@@ -119,4 +118,47 @@ tool-tip-content {
 
 .skills-container .logo {
     font-size: 2.5rem;
+}
+
+.experience-container {
+    width: 100%;
+}
+
+.experience-container .list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 24px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.card-img {
+    width: 32px;
+    height: 32px;
+}
+
+.card p {
+    font-weight: 300;
 }
