@@ -160,6 +160,7 @@ tool-tip-content {
 }
 
 .card p {
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -172,4 +173,8 @@ tool-tip-content {
 .about-me-container img {
     width: 420px;
     height: 420px;
+}
+
+.about-me-container p {
+    font-size: 14px;
 }
