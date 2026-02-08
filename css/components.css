@@ -30,6 +30,7 @@
     font-size: 2.25rem;
     padding: 8px;
     border-radius: 2px;
+    width: 56px;
 }
 
 .socials .ci-github:hover,
