@@ -99,7 +99,7 @@ tool-tip-content {
     width: 100%;
 }
 
-.skills-container ul {
+.skills-container section {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 64px;

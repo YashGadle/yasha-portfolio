@@ -31,7 +31,7 @@
         height: 350px;
     }
 
-    .skills-container ul {
+    .skills-container section {
         grid-template-columns: repeat(2, 1fr);
     }
 }
