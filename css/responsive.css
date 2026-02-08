@@ -46,3 +46,10 @@
         height: 350px;
     }
 }
+
+@media (min-width: 769px) {
+    body {
+        /* Fixes: User shrinks window -> opens side bar -> body scroll is disabled -> expands window -> side-bar disappears but user cannot scroll */
+        overflow: auto !important;
+    }
+}
