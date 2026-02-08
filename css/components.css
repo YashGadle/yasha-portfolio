@@ -162,3 +162,14 @@ tool-tip-content {
 .card p {
     font-weight: 300;
 }
+
+.about-me-container {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.about-me-container img {
+    width: 450px;
+    height: 450px;
+}

@@ -1,8 +1,4 @@
 /* Variables and global element defaults */
-:root {
-    --logo-size: 36px;
-}
-
 main {
     display: flex;
     flex-direction: column;

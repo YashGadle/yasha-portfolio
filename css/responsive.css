@@ -34,4 +34,9 @@
     .skills-container section {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .about-me-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
