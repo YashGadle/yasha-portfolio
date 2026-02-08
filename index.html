@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio showcasing projects and experience." />
+    <title>Yash's Portfolio</title>
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yash's Portfolio" />
+    <meta property="og:description" content="Personal portfolio showcasing projects and experience." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Noto+Sans+Chorasmian&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --bg-color: inherit;
+            --text-color: inherit;
+            --btn-bg-color: black;
+            --btn-text-color: white;
+        }
+
+        body {
+            font-family: "Sora", monospace, sans-serif;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+    </style>
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-container">
+            <img src="./assets/logo.svg" alt="logo" />
+            <a href="/" style="text-decoration: none;">
+                <span class="logo">
+                    <b>Portfolio</b>
+                </span>
+            </a>
+        </div>
+        <div class="links">
+            <a href="#about-me"><span>About Me</span></a>
+            <a href="#skills"><span>Skills</span></a>
+            <a href="#projects"><span>Projects</span></a>
+        </div>
+
+        <div>
+            <!-- TODO: hide this URL -->
+            <a class="resume-link"
+                href="https://docs.google.com/document/d/1O3ycVdn_CKhXFqL7c5hbfhbVA4tai_de7QveIVUt4jY/edit?usp=sharing"
+                target="_blank">
+                <span>Resume</span>
+                <img src="./assets/download_icon.svg" />
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="profile-container">
+            <section class="about-me">
+                <h1>Hello I'm <span class="bold-text">Yash Gadle.</span>
+                    <br />
+                    <span class="bold-text">Frontend</span> <span class="bold-text outline-font">Developer</span>
+                    <br />
+                    Based In <span class="bold-text">India.</span>
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <div class="socials">
+                    <a href="https://github.com/YashGadle" target="_blank">
+                        <i class="fa-brands fa-github ci-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yash-gadle-a5204096/" target="_blank">
+                        <i class="fa-brands fa-linkedin ci-linkedin"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="banner-container">
+                <img src="assets/banner.svg" alt="Decorative illustration">
+                <hr />
+            </section>
+
+        </div>
+
+        <div class="skills-container" id="skills">
+            <h1 style="text-align:center">My <span class="bold-text">Skills</span></h1>
+            <section>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-html5 logo"></i>
+                        <span class="bold-text">HTML</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt logo"></i>
+                        <span class="bold-text">CSS</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-js logo"></i>
+                        <span class="bold-text">Javascript</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-react logo"></i>
+                        <span class="bold-text">ReactJS</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-node logo"></i>
+                        <span class="bold-text">NodeJS</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-server logo"></i>
+                        <span>ExpressJS</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-code-branch logo"></i>
+                        <span class="bold-text">Git</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-golang logo"></i>
+                        <span class="bold-text">Go</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </main>
+</body>
+
+</html>
