@@ -187,79 +187,11 @@ tool-tip-content {
 }
 
 .projects-container {
-    display: flex;
-    display: none; /* WIP */
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     background-color: var(--negative-bg-color);
     color: var(--negative-text-color);
-
-    tabs-wrapper {
-        position: relative;
-        margin: 16px 0;
-
-        .sliding-tabs {
-            display: flex;
-            background-color: var(--negative-bg-color);
-            justify-content: center;
-            align-items: center;
-            width: fit-content;
-            anchor-name: --hover;
-            margin: 8px auto;
-            z-index: 5;
-
-            a {
-                position: relative;
-                text-decoration: none;
-                padding: 10px 64px;
-                z-index: 3;
-
-                &::before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    inset: 0;
-                }
-
-                &.active {
-                    anchor-name: --active;
-                }
-
-                &:hover::before {
-                    anchor-name: --hover;
-                }
-            }
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-    }
-
-    .bubble {
-        position: absolute;
-        top: anchor(top);
-        left: anchor(left);
-        width: anchor-size(width);
-        height: anchor-size(height);
-        transition: all 0.2s;
-
-        &.active {
-            position-anchor: --active;
-            z-index: 2;
-            background: linear-gradient(180deg, gray, #212121);
-        }
-
-        &.hover {
-            position-anchor: --hover;
-            z-index: 1;
-            background: linear-gradient(180deg, #f2f2f2, #b3b3b3);
-        }
-    }
 }

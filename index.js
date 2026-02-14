@@ -59,29 +59,5 @@ class SideBar extends HTMLElement {
   }
 }
 
-class TabsWrapper extends HTMLElement {
-  connectedCallback() {
-    const anchors = this.querySelectorAll("a");
-    const contents = this.getElementsByClassName("tab-content");
-
-    anchors.forEach((a) => {
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-        anchors.forEach((l) => l.classList.remove("active"));
-        Array.from(contents).forEach((l) => l.classList.remove("active"));
-
-        a.classList.add("active");
-        const idx = Array.from(contents).findIndex(
-          (c) => c.dataset.tab === a.dataset.tab,
-        );
-        if (idx === -1) return;
-
-        contents[idx].classList.add("active");
-      });
-    });
-  }
-}
-
-customElements.define("tabs-wrapper", TabsWrapper);
 customElements.define("side-bar", SideBar);
 customElements.define("theme-toggle", ThemeToggle);
