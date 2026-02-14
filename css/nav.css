@@ -102,7 +102,7 @@ nav .side-bar-content {
     background-color: var(--bg-color);
     padding: 8px;
     opacity: 0;
-    z-index: 2;
+    z-index: 8;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;

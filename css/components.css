@@ -72,10 +72,10 @@ tool-tip-content {
     gap: 32px;
     height: max-content;
     box-sizing: border-box;
-}
 
-.profile-container p {
-    font-weight: 250;
+    p {
+        font-weight: 200;
+    }
 }
 
 .about-me {
@@ -85,46 +85,44 @@ tool-tip-content {
 
 .banner-container {
     position: relative;
-}
 
-.banner-container hr {
-    position: absolute;
-    border-bottom: 2px solid var(--border-color);
-    border-radius: 4px;
-    margin: 0;
-    bottom: 4px;
-    left: -100px;
-    right: 20px;
-}
+    hr {
+        position: absolute;
+        border-bottom: 2px solid var(--border-color);
+        border-radius: 4px;
+        margin: 0;
+        bottom: 4px;
+        left: -100px;
+        right: 20px;
+    }
 
-.banner-container img {
-    width: 450px;
-    height: 450px;
+    img {
+        width: 450px;
+        height: 450px;
+    }
 }
 
 .skills-container {
     width: 100%;
-}
 
-.skills-container section {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 64px;
-}
+    section {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 32px;
+    }
 
-.skills-container li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 24px;
-    border: 2px solid var(--border-color);
-    border-radius: 3px;
-    font-size: 12px;
-}
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 24px;
+        border: 2px solid var(--border-color);
+        border-radius: 3px;
+        font-size: 12px;
+    }
 
-.skills-container .logo {
-    font-size: 2.5rem;
 }
 
 .experience-container {
@@ -145,6 +143,11 @@ tool-tip-content {
     padding: 12px 24px;
     border: 2px solid var(--negative-border-color);
     border-radius: 6px;
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+    }
 }
 
 .card-header {
@@ -167,23 +170,96 @@ tool-tip-content {
     height: 32px;
 }
 
-.card p {
-    font-size: 14px;
-    font-weight: 300;
-}
-
 .about-me-container {
     display: flex;
     align-items: center;
     gap: 32px;
     width: 100%;
+
+    img {
+        width: 420px;
+        height: 420px;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
 
-.about-me-container img {
-    width: 420px;
-    height: 420px;
-}
+.projects-container {
+    display: flex;
+    display: none; /* WIP */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--negative-bg-color);
+    color: var(--negative-text-color);
 
-.about-me-container p {
-    font-size: 14px;
+    tabs-wrapper {
+        position: relative;
+        margin: 16px 0;
+
+        .sliding-tabs {
+            display: flex;
+            background-color: var(--negative-bg-color);
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            anchor-name: --hover;
+            margin: 8px auto;
+            z-index: 5;
+
+            a {
+                position: relative;
+                text-decoration: none;
+                padding: 10px 64px;
+                z-index: 3;
+
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    inset: 0;
+                }
+
+                &.active {
+                    anchor-name: --active;
+                }
+
+                &:hover::before {
+                    anchor-name: --hover;
+                }
+            }
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    }
+
+    .bubble {
+        position: absolute;
+        top: anchor(top);
+        left: anchor(left);
+        width: anchor-size(width);
+        height: anchor-size(height);
+        transition: all 0.2s;
+
+        &.active {
+            position-anchor: --active;
+            z-index: 2;
+            background: linear-gradient(180deg, gray, #212121);
+        }
+
+        &.hover {
+            position-anchor: --hover;
+            z-index: 1;
+            background: linear-gradient(180deg, #f2f2f2, #b3b3b3);
+        }
+    }
 }

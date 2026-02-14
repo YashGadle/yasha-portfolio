@@ -45,6 +45,24 @@
         width: 350px;
         height: 350px;
     }
+
+    .projects-container {
+        .margin-wrapper {
+            tabs-wrapper {
+                .sliding-tabs {
+                    a {
+                        padding: 10px 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .bubble {
+        &.hover {
+            display: none;
+        }
+    }
 }
 
 @media (min-width: 769px) {
