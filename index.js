@@ -72,7 +72,12 @@ class LandoText extends HTMLElement {
     chars.forEach((ch, idx) => {
       const child = document.createElement('span');
       child.classList.add('lando-text');
-      child.innerHTML = ch;
+      if (ch === " ") {
+        child.innerHTML = "&nbsp;";
+        child.style.width = "0.2em"; // tweak spacing
+      } else {
+        child.innerHTML = ch;
+      }
       child.style = `transition-delay: ${idx * 0.025}s`;
       containerNode.appendChild(child);
     });
