@@ -59,5 +59,29 @@ class SideBar extends HTMLElement {
   }
 }
 
+class LandoText extends HTMLElement {
+  connectedCallback() {
+    const text = this.innerHTML;
+    const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
+    const segments = [...segmenter.segment(text)];
+    const chars = segments.map(s => s.segment);
+
+    const containerNode = document.createElement('div');
+    containerNode.classList.add('lando-container');
+
+    chars.forEach((ch, idx) => {
+      const child = document.createElement('span');
+      child.classList.add('lando-text');
+      child.innerHTML = ch;
+      child.style = `transition-delay: ${idx * 0.025}s`;
+      containerNode.appendChild(child);
+    });
+
+    this.removeChild(this.firstChild); // clear the existing text as we will replace it with the new
+    this.appendChild(containerNode);
+  }
+}
+
+customElements.define("lando-text", LandoText);
 customElements.define("side-bar", SideBar);
 customElements.define("theme-toggle", ThemeToggle);

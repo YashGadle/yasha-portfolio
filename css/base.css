@@ -4,52 +4,53 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
 }
 
 button {
-    background: none;
-    border: none;
-    color: inherit;
-    font-size: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* Hide outline when focus is from mouse click; show it for keyboard (Tab) */
 a:focus:not(:focus-visible) {
-    outline: 0;
+  outline: 0;
 }
 
 a:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1 {
-    font-weight: 400;
+  font-weight: 400;
 }
+
