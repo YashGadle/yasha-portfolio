@@ -59,7 +59,7 @@ class SideBar extends HTMLElement {
   }
 }
 
-class LandoText extends HTMLElement {
+class LandoAnimate extends HTMLElement {
   connectedCallback() {
     const text = this.innerHTML;
     const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
@@ -82,11 +82,19 @@ class LandoText extends HTMLElement {
       containerNode.appendChild(child);
     });
 
-    this.removeChild(this.firstChild); // clear the existing text as we will replace it with the new
+    this.innerHTML = '';
     this.appendChild(containerNode);
+
+    requestAnimationFrame(() => {
+      containerNode.classList.add('loaded');
+
+      setTimeout(() => {
+        containerNode.classList.remove('loaded');
+      }, 600 + chars.length * 25);
+    });
   }
 }
 
-customElements.define("lando-text", LandoText);
+customElements.define("lando-animate", LandoAnimate);
 customElements.define("side-bar", SideBar);
 customElements.define("theme-toggle", ThemeToggle);

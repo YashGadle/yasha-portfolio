@@ -206,6 +206,10 @@ tool-tip-content {
     transition: transform 0.6s cubic-bezier(.19, 1, .22, 1);
   }
 
+  &.loaded .lando-text{
+    transform: translateY(-100%);
+  }
+
   &:hover .lando-text,
   &:active .lando-text {
     transform: translateY(-100%);
