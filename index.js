@@ -78,7 +78,7 @@ class LandoAnimate extends HTMLElement {
       } else {
         child.innerHTML = ch;
       }
-      child.style = `transition-delay: ${idx * 0.025}s`;
+      child.style = `transition-delay: ${idx * 0.015}s`;
       containerNode.appendChild(child);
     });
 

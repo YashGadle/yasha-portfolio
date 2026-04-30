@@ -203,7 +203,7 @@ tool-tip-content {
 
   .lando-text {
     text-shadow: 0 1.2em 0;
-    transition: transform 0.6s cubic-bezier(.19, 1, .22, 1);
+    transition: transform 0.9s cubic-bezier(.19, 1, .22, 1);
   }
 
   &.loaded .lando-text{
